@@ -1,13 +1,23 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <title>Page Title</title>
+    <meta charset="UTF-8">
+    <title>My Page</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-        <h1>Hello World</h1>
-        <pre>I am Egor</pre>
-        <p> 1 2 3 </p>
+    <div id="shopping-list">
+        <h1>{{ header }}</h1>
+        <input v-model="header">
+    </div>
+    <script src="https://unpkg.com/vue"></script>
+    <script>
+        new Vue({
+            el: '#shopping-list',
+            data: {
+                header: 'This is my page =) Welcome!!!',
+            }
+        });
+    </script>
 </body>
 </html>
